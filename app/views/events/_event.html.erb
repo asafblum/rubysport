@@ -1,0 +1,10 @@
+  
+  <div class="event_location">
+    <tr>
+  <td><%= link_to event.team.nick, event.team%></td>
+  <td><%= link_to  event.location.nick, event.location%></td>
+  <td><%=  event.starttime_formatted %></td>
+  <td><%= link_to 'RSVP', event%></td>
+  <td><%= link_to 'Show', event%></td>
+  </tr>
+</div>

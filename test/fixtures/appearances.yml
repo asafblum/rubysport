@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  friends: 1
+  points: 1
+  rsvp: 1
+  player: 
+
+two:
+  friends: 1
+  points: 1
+  rsvp: 1
+  player: 

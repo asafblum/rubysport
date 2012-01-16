@@ -1,0 +1,12 @@
+<%= form_for([@team, @team.events.build]) do |f| %>
+  <div class="field">
+    <%= f.label :starttime%><br />
+     <%= f.text_field :starttime_formatted, :class => 'date-select', :":starttime" => 'starttime'%>
+    <br/>
+    <%= f.select(:location_id, Location.all.collect {|p| [ p.nick, p.id ] }) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

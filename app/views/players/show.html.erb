@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nick:</b>
+  <%= @player.nick %>
+</p>
+
+<p>
+  <b>Blogurl:</b>
+  <%= @player.email %>
+</p>
+
+  <h2>Future Events:</h2>
+<table border="1">
+  <tr>
+  <th>Group</th>
+    <th>Location </th>
+    <th>StartTime</th>
+    <th>Reply</th>
+
+
+  </tr>
+
+
+  <% @player.teams.each do |team| %>
+
+
+<%= render team.events.where("starttime > ?",Time.now) %>
+
+  <% end %>
+</table>
+  <br/>
+    <% if current_user %>
+  <%= link_to 'New Team', new_team_path %>
+  <% end %>
+
+
+
+
+  
+
+
+
+
+
+
+  
+

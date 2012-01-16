@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rubysport</title>
+  <div id="user_nav">
+  <% if current_user %>
+    Logged in as <%= current_user.nick %>
+    <%= link_to "Log out", log_out_path %>
+  <% else %>
+    <%#= link_to "Sign up", sign_up_path %> or
+    <%= link_to "Log in", login_path %>
+  <% end %>
+</div> 
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= yield :head %>
+<%= yield %>
+<%= yield :scripts %>
+</body>
+
+
+</html>

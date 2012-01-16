@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<h1>Listing teams</h1>
+
+<table>
+  <tr>
+    <th>Nick</th>
+    <th>Blogurl</th>
+    <th>Members count</th>
+    <th colspan="3">Actions</th>
+    
+  </tr>
+
+<% @teams.each do |team| %>
+  <tr>
+    <td><%= team.nick %></td>
+    <td><%= team.blogurl %></td>
+    <td><%= team.members.count %></td>
+    <td><%= link_to 'Show', team %></td>
+    <td><%= link_to 'Edit', edit_team_path(team) %></td>
+    <td><%= link_to 'Destroy', team, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Team', new_team_path %>

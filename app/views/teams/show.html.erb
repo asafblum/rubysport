@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nick:</b>
+  <%= @team.nick %>
+</p>
+
+<p>
+  <b>Blogurl:</b>
+  <%= @team.blogurl %>
+</p>
+
+<h2>Players:</h2>
+<table>
+  <tr>
+    <th>Nick</th>
+    <th>Email</th>
+    <th colspan="1">Actions</th>
+
+  </tr>
+
+<% @team.members.each do |member| %>
+  <tr>
+    <td>    <%= member.player.nick %></td>
+    <td>    <%= member.player.email %></td>
+    <td><%= link_to 'Remove membership', member, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+  
+</table>
+ <h2>Add a Member:</h2>
+<%= link_to 'Send Group Invitation', new_invitation_path(:team_id =>@team.id ) %>
+
+
+
+
+
+ <h2>Future Events:</h2>
+ <%= render @team.events.where("starttime > ?",Time.now) %>
+
+ <h2>Add a Event:</h2>
+<%= render "events/form" %>
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>

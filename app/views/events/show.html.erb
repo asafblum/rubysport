@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>starttime:</b>
+   <td><%=  @event.starttime_formatted %></td>
+</p>
+
+<p>
+  <b>Mapurl:</b>
+  <%= @event.location.mapurl %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @event.location.address %>
+</p>
+<p>
+<%= gmaps4rails(@json) %>
+  </p>
+<br/>
+

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  starttime: 2011-12-18 00:51:00
+  location: 
+  appearance: 
+  team: 
+
+two:
+  starttime: 2011-12-18 00:51:00
+  location: 
+  appearance: 
+  team: 

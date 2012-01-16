@@ -1,0 +1,14 @@
+<%= form_for([@member,@member.team_invites.build]) do |f| %>
+
+  <div class="field">
+    <%= f.label :invitee_email%><br />
+    <%= f.text_field :invitee_email %>
+</div>
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_field :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
