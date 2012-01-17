@@ -22,7 +22,6 @@ def create
 
       
       redirect_to root_url, :notice => "Thank you, we will notify when we are ready."
-      #redirect_to root_url, :notice =>
    
   else
     render :action => 'new'
